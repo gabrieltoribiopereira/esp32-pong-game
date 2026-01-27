@@ -41,13 +41,12 @@ you do the same wairing in both esp32 and in the code change de pins where you h
 <img width="676" height="556" alt="Captura desde 2026-01-27 15-40-34" src="https://github.com/user-attachments/assets/efbbe17e-9e26-4caa-ba76-49a14154c33e" />
 
 
-### Step 2: Get MAC Addresses (Crucial!)
+### Step 2: Get MAC Addresses
 ESP-NOW requires knowing the exact MAC address of the *other* device to send data.
 
 1.  Open `get_mac.py` in Thonny.
 2.  Run it on **ESP32 #1**. Write down its MAC address (e.g., `68:fe:71:80:74:44`).
 3.  Run it on **ESP32 #2**. Write down its MAC address.
-4.  Mark which board will be **Player 1 (Master)** and which is **Player 2 (Slave)**.
 
 ### Step 3: Configure the Code
 You must edit the scripts before uploading them.
@@ -89,5 +88,6 @@ reapet the exact same proces with the pong_slave_p2.py file
 
 
 I've been doing the readme now it's in a good version but I think I will improve it in the future. Right now the game is functional but before ship it I will improve the game making a counter for the pointa and I'll make a way that the game starts slow and gain speed over time.
+
 
 
