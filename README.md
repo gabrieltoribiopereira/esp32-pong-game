@@ -83,6 +83,7 @@ You must edit the scripts before uploading them.
 2.  Open your configured `Pong_Master_P1.py`.
 3.  Go to **File -> Save As... -> MicroPython device**.
 4.  **Save it as `main.py`**.
+(It's the same proces as the last one but with the actual code)
 
 **On ESP32 #2 (Slave):**
 reapet the exact same proces with the pong_slave_p2.py file
@@ -91,12 +92,6 @@ reapet the exact same proces with the pong_slave_p2.py file
 1.  Power up both ESP32s (USB or Battery).
 2.  The screens should initialize.
 4.  Press the button to move UP your paddle. 
-
-#creando el esquema parael desto
-
-
-I've been doing the readme now it's in a good version but I think I will improve it in the future. Right now the game is functional but before ship it I will improve the game making a counter for the pointa and I'll make a way that the game starts slow and gain speed over time.
-
 
 
 
