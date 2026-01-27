@@ -1,6 +1,6 @@
 # ESP32 Pong Game (ESP-NOW Multiplayer)
 
-This project is a multiplayer Pong game running on two ESP32 microcontrollers. They communicate with each other using the **ESP-NOW** protocol (a low-power, Wi-Fi independent protocol from Espressif). One ESP32 acts as the **Master** (computes game physics) and the other as the **Slave** (displays game state and sends input).
+This project is a multiplayer Pong game running on two ESP32 microcontrollers. They communicate with each other using the **ESP-NOW** protocol. One ESP32 acts as the **Master** (computes game physics) and the other as the **Slave** (displays game state and sends input).
 
 ## Hardware Required
 
@@ -92,6 +92,7 @@ reapet the exact same proces with the pong_slave_p2.py file
 1.  Power up both ESP32s (USB or Battery).
 2.  The screens should initialize.
 4.  Press the button to move UP your paddle. 
+
 
 
 
