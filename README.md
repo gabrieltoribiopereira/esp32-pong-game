@@ -13,15 +13,8 @@ You need two identical setups (one for Player 1, one for Player 2):
 
 ## 🔌 Wiring / Pinout
 
-The connections differ slightly for the buttons between Player 1 and Player 2.
+<img width="748" height="376" alt="image" src="https://github.com/user-attachments/assets/f379f9af-b625-4a51-84af-d841239587a1" />
 
-| Component | Pin Function | Player 1 (Master) Pin | Player 2 (Slave) Pin | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| **OLED** | SDA | GPIO 21 | GPIO 21 | Same for both |
-| **OLED** | SCL | GPIO 22 | GPIO 22 | Same for both |
-| **OLED** | VCC | 3.3V | 3.3V | |
-| **OLED** | GND | GND | GND | |
-| **Button** | Signal | **GPIO 15** | **GPIO 18** | One side to Pin, other to GND |
 
 > **Note**: The code enables the internal `PULL_UP` resistor for the buttons. This means you should connect the button between the GPIO pin and **GND**. No external resistors are needed.
 
@@ -78,3 +71,4 @@ You must edit the scripts before uploading them.
 2.  The screens should initialize.
 3.  **Player 1** starts the game.
 4.  Press the button to move your paddle (Single button control: Press to go UP/DOWN checks or holding logic depending on code implementation).
+
