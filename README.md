@@ -66,6 +66,7 @@ You must edit the scripts before uploading them.
 
 **On ESP32 #1 (Master):**
 1.  Open the `ssd1306.py` file in Thonny and save it to the device as `ssd1306.py`.
+   
    1.1.
       <img width="417" height="346" alt="Captura desde 2026-01-27 15-44-00" src="https://github.com/user-attachments/assets/eae31770-f1ea-48cd-b44c-1763d4e7aea0" />
 
@@ -95,6 +96,7 @@ reapet the exact same proces with the pong_slave_p2.py file
 
 
 I've been doing the readme now it's in a good version but I think I will improve it in the future. Right now the game is functional but before ship it I will improve the game making a counter for the pointa and I'll make a way that the game starts slow and gain speed over time.
+
 
 
 
