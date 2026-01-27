@@ -16,7 +16,7 @@ You need two identical setups (one for Player 1, one for Player 2):
 <img width="748" height="376" alt="image" src="https://github.com/user-attachments/assets/f379f9af-b625-4a51-84af-d841239587a1" />
 
 
-> **Note**: The code enables the internal `PULL_UP` resistor for the buttons. This means you should connect the button between the GPIO pin and **GND**. No external resistors are needed.
+You can change the pins as you want just make sure that you change the code
 
 ## 🚀 Installation & Configuration
 
@@ -71,4 +71,5 @@ You must edit the scripts before uploading them.
 2.  The screens should initialize.
 3.  **Player 1** starts the game.
 4.  Press the button to move your paddle (Single button control: Press to go UP/DOWN checks or holding logic depending on code implementation).
+
 
