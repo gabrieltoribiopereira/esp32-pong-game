@@ -66,13 +66,17 @@ You must edit the scripts before uploading them.
 
 **On ESP32 #1 (Master):**
 1.  Open the `ssd1306.py` file in Thonny and save it to the device as `ssd1306.py`.
-<img width="417" height="346" alt="Captura desde 2026-01-27 15-44-00" src="https://github.com/user-attachments/assets/eae31770-f1ea-48cd-b44c-1763d4e7aea0" />
+   1.1.
+      <img width="417" height="346" alt="Captura desde 2026-01-27 15-44-00" src="https://github.com/user-attachments/assets/eae31770-f1ea-48cd-b44c-1763d4e7aea0" />
 
-<img width="529" height="538" alt="Captura desde 2026-01-27 15-47-45" src="https://github.com/user-attachments/assets/fa5a0678-7da8-4990-85c4-9c76b79d1ce6" />
+   1.2.
+      <img width="529" height="538" alt="Captura desde 2026-01-27 15-47-45" src="https://github.com/user-attachments/assets/fa5a0678-7da8-4990-85c4-9c76b79d1ce6" />
 
-<img width="589" height="439" alt="Captura desde 2026-01-27 15-48-10" src="https://github.com/user-attachments/assets/5de0a31c-6722-40f7-9e4f-ded1dcf3ae10" />
+   1.3.
+      <img width="589" height="439" alt="Captura desde 2026-01-27 15-48-10" src="https://github.com/user-attachments/assets/5de0a31c-6722-40f7-9e4f-ded1dcf3ae10" />
 
-<img width="219" height="127" alt="Captura desde 2026-01-27 15-48-26" src="https://github.com/user-attachments/assets/58a81e4b-f231-417f-85c4-dfe0c1ba49ed" />
+   1.4.
+      <img width="219" height="127" alt="Captura desde 2026-01-27 15-48-26" src="https://github.com/user-attachments/assets/58a81e4b-f231-417f-85c4-dfe0c1ba49ed" />
 
 
 2.  Open your configured `Pong_Master_P1.py`.
@@ -91,6 +95,7 @@ reapet the exact same proces with the pong_slave_p2.py file
 
 
 I've been doing the readme now it's in a good version but I think I will improve it in the future. Right now the game is functional but before ship it I will improve the game making a counter for the pointa and I'll make a way that the game starts slow and gain speed over time.
+
 
 
 
