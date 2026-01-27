@@ -41,14 +41,14 @@ You must edit the scripts before uploading them.
 
 **For Player 1 (Master):**
 1.  Open `Pong_Master_P1.py`.
-2.  Find the line: `peer = b'\x30\xc6\xf7\x21\xed\x7c'` (approx line 49).
+2.  Find the line: `peer = b'\x30\xc6\xf7\x21\xed\x7c'` 
 3.  Replace the hex codes with the MAC address of **Player 2**.
     *   *Example*: If P2 MAC is `30:c9:22:11:00:ff`, write `b'\x30\xc9\x22\x11\x00\xff'`.
 4.  (Optional) Update `mi_mac` check on line 43 if you want to enforce identity.
 
 **For Player 2 (Slave):**
 1.  Open `Pong_Slave_P2.py`.
-2.  Find the line `peer = b'\x68\xfe\x71\x80\x74\x44'` (approx line 39).
+2.  Find the line `peer = b'\x68\xfe\x71\x80\x74\x44'` 
 3.  Replace with the MAC address of **Player 1** using the same hex format.
 
 ### Step 4: Uploading Files
@@ -71,5 +71,6 @@ You must edit the scripts before uploading them.
 2.  The screens should initialize.
 3.  **Player 1** starts the game.
 4.  Press the button to move your paddle (Single button control: Press to go UP/DOWN checks or holding logic depending on code implementation).
+
 
 
