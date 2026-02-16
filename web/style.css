@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@400;600&display=swap');
+
+:root {
+    --oled-blue: #1a5fb4;
+    --esp32-black: #121212;
+    --gold: #ffcc00;
+    --silver: #e0e0e0;
+    --pin-green: #00ff00;
+}
+
+body {
+    background-color: #0f172a;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(30, 58, 138, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(30, 58, 138, 0.2) 0%, transparent 50%);
+    color: #f8fafc;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    width: 95%;
+    max-width: 1500px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instructions {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.boards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Aqui pongo el tamaño de todo el grupo de placa y pantalla */
+.player-bundle {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 520px;
+    height: 500px;
+}
+
+/* Esto es para que la placa ESP32 se vea bonita */
+.esp32-side {
+    background-color: var(--esp32-black);
+    width: 180px;
+    height: 380px;
+    border-radius: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #333;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.chip {
+    background: linear-gradient(135deg, var(--silver), #a0a0a0);
+    width: 95px;
+    height: 95px;
+    margin-top: 45px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    border: 2px solid #777;
+    z-index: 6;
+}
+
+.pins-side {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-pins {
+    left: -10px;
+}
+
+.right-pins {
+    right: -10px;
+}
+
+.pin {
+    width: 25px;
+    height: 10px;
+    background-color: var(--gold);
+    border-radius: 1px;
+    border: 1px solid #997a00;
+}
+
+.pin-name {
+    color: var(--pin-green);
+    font-size: 8px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.left-pins .pin-name {
+    left: 30px;
+}
+
+.right-pins .pin-name {
+    right: 30px;
+}
+
+/* La pantalla arriba y el boton abajo */
+.peripheral-stack {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 300px;
+}
+
+/* El diseño de la pantallita OLED */
+.oled-module {
+    background-color: var(--oled-blue);
+    width: 280px;
+    height: 190px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    padding-top: 10px;
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.screen-labels {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.screen-border {
+    background-color: #000;
+    width: 256px;
+    height: 128px;
+    border: 4px solid #111;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px #000;
+    overflow: hidden;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    image-rendering: pixelated;
+}
+
+/* El contenedor del boton */
+.tact-switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+.tact-switch {
+    width: 70px;
+    height: 70px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 0 #1a1a1a;
+}
+
+.tact-switch::before,
+.tact-switch::after,
+.tact-pins-bottom::before,
+.tact-pins-bottom::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background-color: var(--silver);
+    z-index: -1;
+}
+
+.tact-switch::before {
+    top: 15px;
+    left: -12px;
+}
+
+.tact-switch::after {
+    top: 15px;
+    right: -12px;
+}
+
+.tact-pins-bottom::before {
+    bottom: 15px;
+    left: -12px;
+}
+
+.tact-pins-bottom::after {
+    bottom: 15px;
+    right: -12px;
+}
+
+.tact-pins-bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.actuator {
+    width: 42px;
+    height: 42px;
+    background: radial-gradient(circle, #444, #222);
+    border-radius: 50%;
+    border: 2px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 20px;
+    box-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.1), 0 3px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    user-select: none;
+}
+
+.actuator:active {
+    transform: translateY(3px);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Esto es para que el jugador 2 se vea al reves */
+#player2 {
+    flex-direction: row-reverse;
+}
+
+#player2 .esp32-side {
+    left: auto;
+    right: 0;
+}
+
+#player2 .peripheral-stack {
+    right: auto;
+    left: 0;
+}
+
+.module-label {
+    margin-top: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Los botones de abajo de todo */
+.controls-ui {
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.controls-ui button {
+    padding: 14px 32px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.controls-ui button:hover {
+    transform: scale(1.05);
+}
+
+button#btnStart {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+button#btnSchematics {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+button#btnVideo {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.video-modal-content video {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+
+/* Lo que sale al darle al boton de los esquemas */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.modal-content img {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(255, 0, 0, 0.6);
+}
+
+.modal-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    text-align: center;
+}
