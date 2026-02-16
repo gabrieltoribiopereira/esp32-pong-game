@@ -60,7 +60,7 @@ except:
     print("Peer ya existe")
 
 # Configuración Hardware
-i2c = I2C(0, sda=Pin(21), scl=Pin(22), freq=1000000) # 1MHz para máxima fluidez
+i2c = I2C(0, sda=Pin(21), scl=Pin(22), freq=1000000) 
 display = ssd1306.SSD1306_I2C(128, 64, i2c)
 
 display.fill(0)
@@ -141,7 +141,7 @@ while True:
 
         if status != 0: break
 
-        # Control de FPS (~55 FPS)
+        # Control de FPS 
         elapsed = utime.ticks_diff(utime.ticks_ms(), start_time)
         if elapsed < 18: utime.sleep_ms(18 - elapsed)
 
