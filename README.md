@@ -6,8 +6,8 @@ This project is a multiplayer Pong game running on two ESP32 microcontrollers. T
 
 You need two identical setups (one for Player 1, one for Player 2):
 
--   **2x** ESP32 Development Boards (e.g., ESP32 DevKit V1)
--   **2x** OLED SSD1306 Displays (128x64 resolution, I2C interface)
+-   **2x** ESP32 Development Boards
+-   **2x** OLED SSD1306 Displays 
 -   **2x** Push Buttons
 -   Breadboard and Jumper Wires
 
@@ -92,6 +92,7 @@ reapet the exact same proces with the pong_slave_p2.py file
 1.  Power up both ESP32s (USB or Battery).
 2.  The screens should initialize.
 4.  Press the button to move UP your paddle. 
+
 
 
 
